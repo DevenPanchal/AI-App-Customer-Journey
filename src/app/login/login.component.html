@@ -1,0 +1,43 @@
+<br>
+<div class="container">
+  <div class="card card-container">
+
+    <img id="profile-img" class="profile-img-card"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSoe_Qi5UQmA7GgbdLmdSyM4ZU-hPIwLXzp8d6J1dynjYZNtk6I" />
+    <p id="profile-name" class="profile-name-card"></p>
+
+    <form name="form-signin" (ngSubmit)="f.form.valid && loginbypass()" #f="ngForm" novalidate>
+      <div class="alert alert-danger" role="alert" *ngIf="errorMessage">{{errorMessage}}</div>
+      <span id="reauth-email" class="reauth-email"></span>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+        <label for="username">Email </label>
+        
+        <input type="text" style="margin-left:1.65rem" class="form-control" id="username" name="username" pattern="[^ @]*@[^ @]*"
+          [(ngModel)]="user.username" formnovalidate="formnovalidate" />
+        <div *ngIf="f.submitted && !username.valid" class="help-block">Valid email is required</div>
+      </div>
+
+      <br>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+        <label for="password">Password </label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password"
+          formnovalidate="formnovalidate" />
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+      </div>
+      <div id="remember" class="checkbox">
+      </div>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" formnovalidate="formnovalidate" type="submit">Sign
+        in</button>
+    </form>
+
+    <br>
+    <!--Register functionality, component etc. to be added.-->
+    <form name="form-signin" (ngSubmit)="register()" #f="ngForm" novalidate>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" formnovalidate="formnovalidate" type="submit">Create
+        new Account!</button>
+    </form>
+
+
+  </div>
+</div>

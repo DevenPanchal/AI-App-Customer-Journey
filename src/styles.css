@@ -1,7 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css';
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+
+html{
+width: 100%;
+height: 100%;
+}
 
 body {
-    padding: 2em 23em;
-    background:lightgray;
-}
+
+    width: 100%;
+height: 100%;
+        /* Location of the image */
+        background-image: url(assets/images/artificial-intelligence-confusion-719504626-1068x601.jpg);
+        
+       /* background-image: url(assets/images/data-app-pic.jpg);*/
+        
+        /* Background image is centered vertically and horizontally at all times */
+        background-position: center center;
+        
+        /* Background image doesn't tile */
+        background-repeat: no-repeat;
+        
+        /* Background image is fixed in the viewport so that it doesn't move when 
+           the content's height is greater than the image's height */
+        background-attachment: fixed;
+        
+        /* This is what makes the background image rescale based
+           on the container's size */
+        background-size: cover;
+        
+        /* Set a background color that will be displayed
+           while the background image is loading */
+        background-color: #464646;
+
+      }
+
+

@@ -1,0 +1,112 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+
+<br>
+<br>
+<span><a mat-raised-button style="margin-left:5rem" color="accent" href="http://localhost:8890/notebooks/Desktop/Retrain-Generate-embeddings-FitKmeans-WrapKmeans-Dump-Upload-Model.ipynb#"
+  target="_blank"><b>Access Jupyter Notebook - Train on home server and Dump/ Acumos Push</b></a></span>
+<br>
+<br>
+
+
+<span><a mat-raised-button style="margin-left:5rem" color="accent" routerLink="/nifi-training"><b>Trigger Model
+      Generation Or Training via NIFI </b></a></span>
+<br>
+<br>
+<span><a mat-raised-button style="margin-left:5rem" color="accent" (click)=show()><b>Score the
+      Model</b></a></span>
+<br>
+
+
+
+<div class="example-container" *ngIf=showdirectPredict>
+  <form style="background-color: cornsilk; size: 0.8rem; font-style: italic;font-family: Arial, Helvetica, sans-serif;font-size: 0.8rem;border-top-right-radius: 0.5rem;border-bottom-left-radius: 0.5rem;border-bottom-right-radius: 0.5rem;border-top-left-radius: 0.5rem"
+    (ngSubmit)="makepredictrequest()" #myForm="ngForm">
+    <p>
+      <br>
+      <b style="margin-left: 1rem;">Enter the Embedding Dimensions</b>
+      <br>
+      <br>
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d0</mat-label>
+        <input matInput placeholder="d0" [(ngModel)]="dee0" name="d0-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d1</mat-label>
+        <input matInput placeholder="d1" [(ngModel)]="dee1" name="d1-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d2</mat-label>
+        <input matInput placeholder="d2" [(ngModel)]="dee2" name="d2-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d3</mat-label>
+        <input matInput placeholder="d3" [(ngModel)]="dee3" name="d3-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d4</mat-label>
+        <input matInput placeholder="d4" [(ngModel)]="dee4" name="d4-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d5</mat-label>
+        <input matInput placeholder="d5" [(ngModel)]="dee5" name="d5-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1em">
+        <mat-label>Enter ED d6</mat-label>
+        <input matInput placeholder="d6" [(ngModel)]="dee6" name="d6-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+      <mat-form-field class="fields" appearance="fill" style="margin-left:1rem">
+        <mat-label>Enter ED d7</mat-label>
+        <input matInput placeholder="d7" [(ngModel)]="dee7" name="d7-dimension">
+        <!--   <mat-hint>We need your name for the ID badge ;) !</mat-hint>-->
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" style="margin-left:2rem" color="primary" md-raised-button>Submit</button>
+      <button mat-raised-button type="submit" style="margin-left:1rem" color="primary" (click)=dontshow() md-raised-button>Close</button>
+      
+      <b style="margin-left: 10rem;"> RESULT : This Non-CRU customer belongs to Cluster Number : {{modelResponse}} </b>
+
+    </p>
+
+    <br>
+    <br>
+  </form>
+
+
+</div>
+<br>
+
+
+<span><a mat-raised-button style="margin-left:5rem" color="accent" routerLink="/nifi-inference"><b>Trigger Inference for
+      NIFI Pipeline Solution</b></a></span>
+<br>
+<br>
+<span><a mat-raised-button style="margin-left:5rem" color="accent" routerLink=""><b>Trigger Retraining</b></a></span>
+<br>
+<br>
+<span><a mat-raised-button style="margin-left:5rem" color="accent" href="http://deven1.research.att.com:9999/nifi"
+    target="_blank"><b>Access NIFI to Trigger Manually for Data Processing / Training / Retraining / Acumos Push/ Inference</b></a></span>
+<br>
+<br>
+
+
+
+<!--   <span class="fill-remaining-space"><a mat-raised-button color="warn" routerLink="/signin"><b>Sign In</b></a></span>
+      <span><a mat-raised-button color="warn" style="margin-left:1em" routerLink="/register"><b>Register</b></a></span> -->

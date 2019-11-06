@@ -1,0 +1,8 @@
+{
+  "appId": "com.deven.customer",
+  "appName": "ATT-CJA",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/frontend",
+  "cordova": {}
+}
